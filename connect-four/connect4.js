@@ -62,6 +62,9 @@ function makeHtmlBoard() {
 
 function findSpotForCol(x) {
   // TODO: write the real version of this, rather than always returning 0
+
+  //needs reviewing **************************************
+
   for (let y = HEIGHT - 1; y >= 0; y--) {
     if (!board[y][x]) {
       return y;
@@ -115,6 +118,8 @@ function handleClick(evt) {
 
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
+
+  //needs reviewing ***********************************************
 
   if (board.every(row => row.every(cell => cell))) {
     return endGame("Tie")
